@@ -1,10 +1,12 @@
-function updateHeadline() {
-	const input = document.getElementById('new-headline');
-	const headline = document.getElementById('cta-headline');
-	if (input.value.trim() !== '') {
-		headline.textContent = input.value;
-	}
-}
+// Select elements
+const input = document.getElementById('new-headline');
+const button = document.querySelector('.update-cta-section button');
+const headline = document.getElementById('cta-headline');
 
-// Make sure the function is available globally
-window.updateHeadline = updateHeadline;
+if (input && button && headline) {
+	button.addEventListener('click', function () {
+		if (input.value.trim() !== '') {
+			headline.textContent = input.value;
+		}
+	});
+}
