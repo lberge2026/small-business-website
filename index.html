@@ -23,10 +23,17 @@
 </section>
 <main>
     <hero>
-        <h2>Discover the Best Baseball Gear</h2>
+        <h2 id="cta-headline">Discover the Best Baseball Gear</h2>
         <p>Explore our wide range of baseball equipment, from bats and gloves to protective gear and apparel.</p>
         <a href="#shop" class="cta-button">Shop Now</a>
 </main>
+<section class="update-cta-section">
+    <h3>Update CTA Headline</h3>
+    <form id="update-cta-form" onsubmit="return false;">
+        <input type="text" id="new-headline" placeholder="Enter new headline" />
+        <button type="button" onclick="updateHeadline()">Update Headline</button>
+    </form>
+</section>
 <div class="service">
     <h2>Our Services</h2>
     <ul>
@@ -36,8 +43,19 @@
         <li>Team Uniforms</li>
     </ul>
 </div>
+
 <footer>
     <p>Contact us at info@baseballworld.com or (555) 123-4567.</p>
+</footer>
+<script>
+function updateHeadline() {
+    const input = document.getElementById('new-headline');
+    const headline = document.getElementById('cta-headline');
+    if (input.value.trim() !== '') {
+        headline.textContent = input.value;
+    }
+}
+</script>
 </footer>
 
 </body>
