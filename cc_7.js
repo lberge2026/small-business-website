@@ -2,7 +2,7 @@
 const input = document.getElementById('new-headline');
 const button = document.querySelector('.update-cta-section button');
 const headline = document.getElementById('cta-headline');
-
+// Add event listener to button
 if (input && button && headline) {
 	button.addEventListener('click', function () {
 		if (input.value.trim() !== '') {
